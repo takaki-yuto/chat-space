@@ -16,7 +16,7 @@ Things you may want to cover:
 ## usersテーブル
 |column|Type|Options|
 |------|----|-------|
-|name|text|null: false|
+|name|string|null: false|
 |email|text|null: false, unique: true|
 |pass|text|null: false|
 
@@ -28,7 +28,7 @@ Things you may want to cover:
 ## groupsテーブル
 |column|Type|Options|
 |------|----|-------|
-|name|text|null: false|
+|name|string|null: false|
 
 ### Association
 - has_many :users, through: :groups_users
@@ -48,14 +48,14 @@ Things you may want to cover:
 ## messagesテーブル
 |column|Type|Options|
 |------|----|-------|
-|body|text|null:false|
-|image|text|null:false|
+|body|text||
+|image|text||
 |group_id|integer|null:false, foreign_key:true|
 |user_id|integer|null:false, foreign_key:true|
 
 ### Association
 - belongs_to :user
-- has_many :groups
+- belongs_to :group
 
 * Database initialization
 
