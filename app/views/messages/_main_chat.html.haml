@@ -27,10 +27,10 @@
       .message-text
         今日は夜から雨
   .messge-from
-    %form.new-message{:action => "#", :method => "post"}
+    %form.new-message{action:"#", method:"post"}
       .input-box
-        %input.text{:type => "text", :placeholder => "type a message"}
-        %label.image{:for => "message_image"}
+        %input.text{type:"text", placeholder:"type a message"}
+        %label.image{for:"message_image"}
           %i.fa.fa-image
-          %input#message_image.image_file{:type => "file"}
-      %input.send-btn{:type => "submit",:value => "send"}
+          %input#message_image.image_file{type:"file"}
+      %input.send-btn{type:"submit", value:"send"}
