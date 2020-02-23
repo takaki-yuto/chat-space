@@ -1,0 +1,36 @@
+.chat-main
+  .header-bar
+    .left-box
+      .group-name
+        test
+      .member-list
+        Member :
+        .member
+          masa
+    = link_to "#",class:"edit-btn-color" do
+      .edit-btn
+        Edit
+  .window
+    .messages
+      .message
+        .message-name
+          masa
+        .message-date
+          2019/11/20(Wed) 17:43:01
+      .message-text
+        おはよう！
+      .message
+        .message-name
+          masa
+        .message-date
+          2019/11/20(Wed) 17:43:34
+      .message-text
+        今日は夜から雨
+  .messge-from
+    %form.new-message{:action => "#", :method => "post"}
+      .input-box
+        %input.text{:type => "text", :placeholder => "type a message"}
+        %label.image{:for => "message_image"}
+          %i.fa.fa-image
+          %input#message_image.image_file{:type => "file"}
+      %input.send-btn{:type => "submit",:value => "send"}
