@@ -4,13 +4,15 @@
       .user-name
         = current_user.name
       .menu
-        = link_to "#",class:"edit-link" do
+        = link_to new_group_path,class:"edit-link" do
           %i.fas.fa-edit
         = link_to edit_user_path(current_user),class:"cog-link" do
           %i.fas.fa-cog
   .group-list
-    .group
-      .group-name
-        techcamp
-      .group-mesage
-        まだメッセージがありません
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group-name
+            = group.name
+          .group-mesage
+            まだメッセージがありません
